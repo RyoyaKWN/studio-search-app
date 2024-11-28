@@ -1,12 +1,15 @@
-import express from 'express';
+import http from "http";
 
-const app = express();
-const port = 5000;
+const HOSTNAME = "0.0.0.0";
+const PORT = 5000;
 
-app.get('/', (req, res) => {
-  res.send('バックエンドサーバーが動作しています！');
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader("Content-Type", "text/plain");
+  res.end("Hello World");
 });
 
-app.listen(port, () => {
-  console.log(`サーバーがポート${port}で起動しました`);
+server.listen(PORT, HOSTNAME, () => {
+  console.log(`Server running at http://${HOSTNAME}:${PORT}`);
 });
+
