@@ -4,19 +4,24 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node --loader ts-node/esm --experimental-specifier-resolution=node src/index.ts"
+    "start": "node --loader ts-node/esm --experimental-specifier-resolution=node src/index.ts",
+    "dev": "node ts-node-dev/esm --respawn --transpile-only --experimental-specifier-resolution=node src/index.ts",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
     "@types/node": "^22.10.1",
     "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.7.2"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.21.1"
   }
 }

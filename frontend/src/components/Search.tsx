@@ -10,7 +10,7 @@ const SearchPage: React.FC = () => {
     
     return (
         <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center">
-            <h1 className="text-3x1 font-bold mb-6 text-blue-600">Studio Search</h1>
+            <h2 className="text-3x1 font-bold mb-6 text-blue-600">Search</h2>
             <div className="bg-white p-6 rounded-lg mb-6 shadow-md w-full max-w-md">
                 <div className="mb-4">
                     <label className="block text-gray-700 font-medium mb-2">Area:</label>
